@@ -279,6 +279,9 @@ const transferFeature = (e) => {
 
   inputTransferAmount.value = inputTransferTo.value = "";
   inputTransferAmount.blur();
+  if (!receiverAcc) {
+    alert("Receiver account does not exist, please try with JD");
+  }
   if (
     transferedAmount > 0 &&
     receiverAcc &&
